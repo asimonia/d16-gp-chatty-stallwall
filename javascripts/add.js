@@ -1,5 +1,6 @@
 /*jshint esversion: 6 */
 
+
 var Chatty = (function(oldChatty){
 	var msgArray = [];
 	var msgCount = 0;
@@ -33,5 +34,4 @@ var Chatty = (function(oldChatty){
 		msgArray.splice(deleteThisOne, 1);
 		}
 		return oldChatty;
-})(Chatty || {});
-
+})(Chatty);

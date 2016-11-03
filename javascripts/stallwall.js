@@ -41,7 +41,6 @@ $("#switchStalls").change(function() {
 	$("#cover").removeClass();
 	
 	var selectedId = $(this).find(":selected").attr("id");
-	console.log(selectedId);
 
 	$("#cover").addClass(selectedId);
 

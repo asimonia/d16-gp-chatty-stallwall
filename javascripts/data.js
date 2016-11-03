@@ -1,19 +1,20 @@
 /*jshint esversion: 6 */
 
-var Chatty = (function(oldChatty){
-	var returnedData = [];
-	return {
-		loadData: function(callback){
-			var loader = new XMLHttpRequest();
-			loader.addEventListener("load", function() {
-			returnedData = JSON.parse(this.responseText).graffiti;
-			callback(returnedData);
+
+var Chatty = (function(oldChatty) {
+
+	oldChatty.loadData = function(callback) {
+
+			$.ajax({
+				url: "javascripts/graffiti.json"
+			}).done(function(json) { 
+				console.log(json.graffiti);
+				callback(json.graffiti);
 			});
-			loader.open("GET", "javascripts/graffiti.json");
-			loader.send();
-		}
-	}
-		return oldChatty
+	};
+
+	return oldChatty;
+
 })(Chatty || {});
 
 
