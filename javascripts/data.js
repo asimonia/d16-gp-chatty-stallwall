@@ -1,4 +1,5 @@
-"use strict"
+/*jshint esversion: 6 */
+
 var Chatty = (function(oldChatty){
 	var returnedData = [];
 	return {
@@ -13,6 +14,6 @@ var Chatty = (function(oldChatty){
 		}
 	}
 		return oldChatty
-})(Chatty);
+})(Chatty || {});
 
 

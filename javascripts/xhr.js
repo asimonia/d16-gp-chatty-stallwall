@@ -1,4 +1,4 @@
-"use strict"
+/*jshint esversion: 6 */
 
 function showData(returnedData){
 	//console.log(returnedData);
