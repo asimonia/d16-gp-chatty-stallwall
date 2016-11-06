@@ -1,6 +1,6 @@
 /*jshint esversion: 6 */
 
-function showData(returnedData){
+function showData(returnedData) {
 
 	for (var i = 0; i < returnedData.length; i++) {
 		console.log("Contents of XHR:", returnedData[i]);

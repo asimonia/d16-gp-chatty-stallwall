@@ -1,0 +1,222 @@
+/**********TOGGLE CLASSES***********/
+/*VARIABLES*/
+@import url('https://fonts.googleapis.com/css?family=Amatic+SC|Permanent+Marker|Proza+Libre|Raleway');
+
+$font-stack:        'Tagtype-Freefont';
+$font-face:         'PermanentMarker';
+$font-face-url:     'PermanentMarker.ttf';
+$stall-url:         '../images/stall.jpg';
+$wood-url:          '../images/wood.jpg';
+$dog-url:           '../images/dog.jpg';
+$stallwall2-url:    '../images/stallwall2.jpg;
+
+.dim {
+	background-color: rgba(0,0,0,0.8); 
+	color: white;
+	background-size: cover;
+}
+
+.largify {
+	font-size:  1.15em;
+	text-align: center;
+	font-weight:  bold; 
+}
+
+.tag {
+	font-family: $font-stack;
+}
+
+.ladies {
+	background: url($stall-url) no-repeat top center fixed; 
+	background-size: cover;
+  height: 100vh;
+  min-height: 100%;
+}
+
+.wood {
+    background: url($wood-url) no-repeat top center fixed; 
+    background-size: cover;
+    height: 100vh;
+    min-height: 100%;
+    color: white;
+
+}
+
+.dog {
+    background: url('$dog-url') no-repeat top center fixed; 
+    background-size: cover;
+    height: 100vh;
+    min-height: 100%;
+
+}
+
+.default{
+    background: url('$stallwall2-url') no-repeat top center fixed; 
+    background-size: cover;
+    height: 100vh;
+    min-height: 100%;
+
+}
+
+
+
+/*******************BODY********************/
+html {
+  height:  100%;
+}
+
+
+body { 
+	font-size: 1.4em;
+	background-color: black;
+	font-family: $font-face; 
+	text-align: center;
+ 
+}
+
+@font-face {
+    font-family: $font-face; 
+    src: url($font-face-url); /*URL to font*/
+}
+
+@font-face {
+    font-family: $font-stack; 
+    src: url($font-face-url); /*URL to font*/
+}
+
+
+
+/*********************NAV********************/
+
+#logo {
+  margin-right: 2em;
+  font-family: $font-stack;
+}
+
+nav {
+  text-align: center;
+	font-size:  .8em;
+	border: .1em solid black;
+	top: 0;
+	height: 1.7em;
+	right: .2em;
+  z-index: 100;
+  position: fixed;
+  width: 100%;
+  margin: 0 auto;
+  padding:  1em;
+  display: block;
+	color:  white;
+	background-color:  black;
+	background-size: 100%;  
+}
+
+#clear {
+	font-size: .6em;
+	padding: .77em;
+	color:  black;
+	font-family: $font-face; 
+}
+
+#input {
+	
+	width: 20em;
+	font-size: .7em;
+	height: 2em;
+}
+
+select {
+  margin-left: 2em;
+  -webkit-appearance: none;
+  font-family: $font-face; 
+  background-color:  black;
+  color:  white;
+  padding: .5em;
+  font-size:  .7em;
+}
+
+/***********************WALL*******************/
+
+.cover {
+   background: url('../images/stallwall2.jpg') no-repeat top center fixed; 
+  background-size: cover;
+  height:  100vh;
+}
+
+
+#wrapper {
+	text-align: center;
+	position: relative;
+	top: 3em;
+	font-size: .8em;
+  height: 100%;
+}
+
+
+
+/* Bubble Float Left */
+.btn {
+font-family: 'PermanentMarker'; 
+margin-left: 2em;
+padding-left: 1em;
+border: .3em solid black;
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px transparent;
+  position: relative;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+}
+.btn:before {
+  position: absolute;
+  z-index: -1;
+  content: '';
+  top: calc(50% - 10px);
+  left: 0;
+  border-style: solid;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent #e1e1e1 transparent transparent;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+}
+.btn:hover, .hvr-bubble-float-left:focus, .btn:active {
+  -webkit-transform: translateX(10px);
+  transform: translateX(10px);
+  background-color: red;
+}
+.btn:hover:before, .hvr-bubble-float-left:focus:before, .btn:active:before {
+  -webkit-transform: translateX(-10px);
+  transform: translateX(-10px);
+    background-color: red;
+
+}
+
+/*****************GLOW***************/
+
+
+.msg {
+  
+  
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(10, 0, 0, 0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.9s;
+  -webkit-transition-property: box-shadow;
+  transition-property: box-shadow;
+}
+
+.msg:hover, .msg:focus, .msg:active {
+  box-shadow: 0 0 15px rgba(8, 4, 50, 0.6);
+}
+
+

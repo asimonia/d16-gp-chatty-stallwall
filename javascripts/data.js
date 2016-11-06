@@ -8,7 +8,6 @@ var Chatty = (function(oldChatty) {
 			$.ajax({
 				url: "javascripts/graffiti.json"
 			}).done(function(json) { 
-				console.log(json.graffiti);
 				callback(json.graffiti);
 			});
 	};
