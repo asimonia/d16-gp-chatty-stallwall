@@ -16,15 +16,16 @@ var Chatty = (function(oldChatty){
 		},
 
 	oldChatty.readMsg = function(msg) {
-			return msgArray += document.getElementById('input').value;
+			return msgArray += $("input").val();
 		},
 
 	oldChatty.deleteMsg = function(btnclicked) {
-		if (event.target.className === "btn"){
+		if (event.target.className === "btn") {
 			var parent = event.target.parentNode;
 			var parentId = parent.id;
 			parent.remove();
-			}
+		}
+		
 		for (var t = 0; t < msgArray.length; t++){
 			if (parentId === msgArray[t].id){
 				var deleteThisOne = t;
