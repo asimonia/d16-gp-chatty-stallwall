@@ -1,18 +1,19 @@
-"use strict"
-var Chatty = (function(oldChatty){
-	var returnedData = [];
-	return {
-		loadData: function(callback){
-			var loader = new XMLHttpRequest();
-			loader.addEventListener("load", function() {
-			returnedData = JSON.parse(this.responseText).graffiti;
-			callback(returnedData);
+/*jshint esversion: 6 */
+
+
+var Chatty = (function(oldChatty) {
+
+	oldChatty.loadData = function(callback) {
+
+			$.ajax({
+				url: "javascripts/graffiti.json"
+			}).done(function(json) { 
+				callback(json.graffiti);
 			});
-			loader.open("GET", "javascripts/graffiti.json");
-			loader.send();
-		}
-	}
-		return oldChatty
-})(Chatty);
+	};
+
+	return oldChatty;
+
+})(Chatty || {});
 
 
