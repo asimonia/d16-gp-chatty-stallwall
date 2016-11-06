@@ -11,7 +11,7 @@ $("#input").keypress(function(event) {
 
 	if (event.keyCode === 13) {
 		Chatty.storeMsg(userInput);
-        $("#input").value = '';
+        $("#input").val("");
        	$("#clear").disabled = true;
 	}
 });
