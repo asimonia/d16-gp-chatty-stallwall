@@ -9,7 +9,7 @@ $("#input").keypress(function(event) {
 		$("#clear").disabled = false;
 	}
 
-	if (event.keyCode === 13) {
+	if (event.keyCode === 13 && $("#input").val() !== "") {
 		Chatty.storeMsg(userInput);
         $("#input").val("");
        	$("#clear").disabled = true;
@@ -20,8 +20,9 @@ $("#output").click(function(event) {
 	Chatty.deleteMsg(event.target);
 });
 
-$("#clear").click(function() {
-	$("#output").innerHTML = "";
+$("button#clear").click(function() {
+	console.log("Clear has been clicked");
+	$("p").empty();
 });
 
 $("#dark").click(function() {
